@@ -12,7 +12,7 @@ echo "cd into MagicMirror proj";
 cd ~/MagicMirror;
 
 echo "Now clone DanCout's SmartMirror project into this file structure";
-git clone -b Develop https://github.com/dancout/SmartMirror.git;
+git clone https://github.com/dancout/SmartMirror.git;
 echo "DanCout's SmartMirror cloned!"
 
 echo "Now move over the config.js file";
