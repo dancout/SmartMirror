@@ -18,7 +18,7 @@ echo "DanCout's SmartMirror cloned!"
 echo "Now move over the config.js file";
 cd ~/MagicMirror/SmartMirror
 
-bash SmartMirror.sh;
+bash MoveConfig.sh;
 
 cd ~
 echo "now starting the pm2 server, with my webpage";
