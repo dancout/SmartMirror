@@ -35,39 +35,37 @@ var config = {
 		},
 		{
 			module: "clock",
-			position: "top_left"
+			position: "top_left",
+			config: {
+				displayType: "analog",
+				timeFormat: 12,
+				displaySeconds: false,
+				timezone: "America/New_York"
+			}
 		},
 		{
 			module: "calendar",
 			header: "US Holidays",
 			position: "top_left",
 			config: {
+				tableClass: "xsmall",
 				calendars: [
 					{
 						symbol: "calendar-check",
-						url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
-					}
-				]
-			}
-		},
-		
-		{
-			module: "calendar",
-			header: "My Calendar",
-			position: "top_right",
-			config: {
-				calendars: [
-					{
-						symbol: "calendar-check",
-						url: "https://calendar.google.com/calendar/ical/danieljeffreycouturier%40gmail.com/public/basic.ics"
-					}
-				]
-			}
-		},
+						url: "https://calendar.google.com/calendar/ical/dancout%40umich.edu/private-6a9ee36da231d0f5f8dea09f604b78b7/basic.ics"
+					},
 
+					{
+						symbol: "calendar-check",
+						url: "https://calendar.google.com/calendar/ical/umich.edu_5bbq3saakjpgq72a1l45tpsonc%40group.calendar.google.com/private-4186c988d94f280c9bb9b0d0e12928fa/basic.ics"
+					}
+				]
+				
+			}
+		},
 		{
 			module: "compliments",
-			position: "lower_third"
+			position: "bottom_bar"
 		},
 		{
 			module: "currentweather",
@@ -99,7 +97,25 @@ var config = {
 					}
 				],
 				showSourceTitle: true,
-				showPublishDate: true
+				showPublishDate: true,
+				showDescription: true,
+				updateInterval: 20000
+			}
+		},
+		{
+			module: "MMM-DarkSkyForecast",
+			header: "Weather",
+			position: "top_right",
+			classes: "default everyone",
+			disabled: false,
+			config: {
+			  apikey: "e038ea9e03a3f696333680cfdce740cb",
+			  latitude: "42.299690",
+			  longitude: "-83.486794",      
+			  iconset: "4c",
+			  concise: true,
+			  forecastLayout: "table",
+			  units: "us"
 			}
 		},
 	]
