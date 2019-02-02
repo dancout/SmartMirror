@@ -45,7 +45,7 @@ var config = {
 		},
 		{
 			module: "calendar",
-			header: "US Holidays",
+			header: "Dan's Calendar",
 			position: "top_left",
 			config: {
 				tableClass: "xsmall",
