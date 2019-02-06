@@ -118,6 +118,19 @@ var config = {
 			  units: "us"
 			}
 		},
+		{
+			    "module": "MMM-awesome-alexa",
+			    "position": "bottom_bar",
+			    "config": {
+				"wakeWord": "Alexa",
+				"clientId": "YOUR_CLIENT_ID",
+				"clientSecret": "YOUR_CLIENT_SECRET",
+				"deviceId": "YOUR_DEVICE_ID",
+				"refreshToken": "YOUR_REFRESH_TOKEN",
+				"lite": false,
+				"isSpeechVisualizationEnabled": false
+			    }
+		},
 	]
 
 };
