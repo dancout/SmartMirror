@@ -21,16 +21,35 @@ echo "Now enter the SMartMirror directory"
 echo "Now move over the config.js file & main.css file";
 
 cd ~/MagicMirror/SmartMirror
-
 bash MoveConfig.sh;
 
-cd ~
+# install sub modules from github
+echo "now adding sub modules"
+cd ~/MagicMirror/modules
+
+git clone https://github.com/dolanmiu/MMM-awesome-alexa.git
+git clone https://github.com/dmcinnes/MMM-forecast-io.git
+git clone https://github.com/AgP42/MMM-SmartWebDisplay.git
+git clone https://github.com/Jopyth/MMM-Remote-Control.git
+git clone https://github.com/shbatm/MMM-AlexaOnOff.git
+
+cd MMM-awesome-alexa 
+npm install
+
+cd ../MMM-forecast-io
+npm install
+
+cd ../MMM-SmartWebDisplay
+npm install
+
+cd MMM-Remote-Control
+npm install
+
+cd MMM-AlexaOnOff
+npm install
+
+echo "All sub modules installed!"
+
 echo "now starting the pm2 server, with my webpage";
 
 pm2 start all;
-
-# echo "moving config";
-
-# cp config.js ../config/config.js
-
-# echo "move complete";
